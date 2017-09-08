@@ -1,5 +1,5 @@
 # Termo Bags
-1. git clone https://github.com/yurayurakh/Termo-Bags.git termobags
+1. git clone https://github.com/yurayurakh/Termo-Bags.git
 2. cd termobags
 3. npm i
 4. bower i

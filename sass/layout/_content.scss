@@ -1,0 +1,74 @@
+.block1 {
+  padding: 80px 0 120px;
+  background: #f8f8f8;
+  .block1__title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    .title__red-block {
+      display: inline-block;
+      padding: 20px 42px 21px 30px;
+      background: #ff0000;
+      color: #ffffff;
+      margin-left: 30px;
+      font-family: $main_font_familyBold;
+      box-shadow:  15px 15px 30px rgba(255,0,0,.3);
+      .currency {
+        display: inline-block;
+        width: 29px;
+        height: 33px;
+        background: url("../img/rub-icon.png") center no-repeat;
+      }
+    }
+    &:after {
+      display: none;
+    }
+  }
+  .triger {
+    padding-bottom: 20px;
+    margin-bottom: 45px;
+    &__item {
+      display: inline-block;
+      margin-right: 25px;
+      &_icon {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      &_text {
+        display: inline-block;
+        color: #3b5998;
+        font-family: $main_font_familyBold;
+      }
+      .map-icon {
+        position: relative;
+        top: -5px;
+      }
+    }
+  }
+  .equipment {
+    margin-bottom: 40px;
+    padding-bottom: 45px;
+    &__franch {
+      font-size: 18px;
+      font-family: $main_font_familyBold;
+      display: inline-block;
+      margin-right: 30px;
+      line-height: 1.2;
+    }
+    &__address-company {
+      font-size: 45px;
+      font-family: $main_font_familyBold;
+      color: #ff0000;
+    }
+  }
+  .dop-info {
+    margin-bottom: 70px;
+    .dop-info__item {
+      display: inline-block;
+      line-height: 24px;
+      margin-right: 50px;
+      padding: 12px 0 12px 20px;
+      border-left: 3px solid #3b5998;
+      text-transform: uppercase;
+    }
+  }
+}
