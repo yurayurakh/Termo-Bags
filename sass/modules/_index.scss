@@ -26,12 +26,11 @@
       color: #ffffff;
       text-transform: uppercase;
       font-size: 15px;
-      transition: all .3s ease;
       &:hover {
-        padding: 24px 14px 0;
+        //padding: 24px 17px 0;
         background: #4c75cb;
-        font-size: 16px;
-        font-family: $main_font_familyBold;
+        font-size: 15px;
+        //font-family: $main_font_familyBold;
         color: #ffffff;
       }
     }
@@ -73,6 +72,8 @@
     font-family: $main_font_familyThin;
     position: relative;
     padding-bottom: 10px;
+    margin-top: 0;
+  text-transform: uppercase;
     &:after {
       position: absolute;
       left: 0;
@@ -96,4 +97,20 @@
   font-family: $main_font_familyBold;
   border: 3px solid #ff0000;
   border-radius: 35px;
+}
+
+// Подложка
+.substrate {
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.substrate-lvl1 {
+  box-shadow: 0 0 80px rgba(59,89,152,.2);
+  background: rgba(233,237,244,.1);
+}
+
+.substrate-lvl2 {
+  box-shadow: 0 0 50px rgba(59,89,152,.1);
+  background: rgba(233,237,244,.2);
 }
