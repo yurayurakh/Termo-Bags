@@ -114,3 +114,16 @@
   box-shadow: 0 0 50px rgba(59,89,152,.1);
   background: rgba(233,237,244,.2);
 }
+
+.bg2 {
+  background: $bg_color2;
+}
+
+.five-block {
+  width: 20%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
