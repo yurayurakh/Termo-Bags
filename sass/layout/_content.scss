@@ -54,11 +54,6 @@
       margin-right: 30px;
       line-height: 1.2;
     }
-    &__address-company {
-      font-size: 45px;
-      font-family: $main_font_familyBold;
-      color: #ff0000;
-    }
   }
   .dop-info {
     margin-bottom: 70px;
@@ -114,7 +109,144 @@
   }
 }
 .block3 {
-  padding: 70px 0;
+  padding: 80px 0;
+  .title {
+    margin-bottom: 40px;
+  }
+  .fitment__item {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    .fitment__gallery {
+      &_choose {
+        margin-bottom: 25px;
+        border-radius: 10px;
+        text-align: center;
+        img {
+          border-radius: 10px;
+          width: 100%;
+        }
+      }
+      &_list {
+        text-align: center;
+        .list-item {
+          width: 30%;
+          float: left;
+          margin-right: 5%;
+          margin-bottom: 0;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &_title {
+      h2 {
+        margin: 0 0 10px 20px;
+        font-size: 30px;
+        font-family: $main_font_familyBold;
+      }
+    }
+    &__description {
+      margin-bottom: 20px;
+    }
+    &_parameters {
+      margin-bottom: 20px;
+      .parameter__item {
+        margin-bottom: 10px;
+        &_name {
+          cursor: pointer;
+          padding: 5px 0 5px 35px;
+          background: url("../img/open-icon.png") left center no-repeat;
+          span {
+            color: #3b5998;
+            border-bottom: 1px dashed #99a8c8;
+          }
+        }
+        &_descr {
+          margin-top: 10px;
+          padding-left: 35px;
+          font-size: 0;
+          .descr-text {
+            font-size: 16px;
+          }
+          .descr__type {
+            display: inline-block;
+            border-right: 2px solid  #f1f1f2;
+
+            &_name {
+              font-size: 16px;
+              text-align: center;
+              padding: 0 15px 7px 15px;
+              border-bottom: 2px solid  #f1f1f2;
+              font-family: $main_font_familyBold;
+            }
+            &_value {
+              font-size: 16px;
+              font-family: $main_font_familyBold;
+              text-align: center;
+              margin-top: 7px;
+              color: #ff0000;
+            }
+            &:first-child {
+              &_name {
+                padding: 0 15px 7px 0;
+              }
+            }
+            &:last-child {
+              border-right: 0;
+              &_name {
+                padding: 0 0 7px 15px;
+              }
+            }
+          }
+        }
+        .parameter-active {
+          background: url("../img/close-icon.png") left center no-repeat;
+        }
+      }
+    }
+    .fitment__buy-inner {
+      .substrate {
+        padding: 10px;
+      }
+      .fitment__pricing {
+        background: #ffffff;
+        .fitment__price {
+          margin-top: 5px;
+          display: inline-block;
+          padding-left: 30px;
+          font-size: 40px;
+          color: #3b5998;
+          font-family: $main_font_familyBold;
+          padding-right: 15px;
+          border-right: 2px solid #f2f2f2 ;
+          .currency {
+            display: inline-block;
+            width: 27px;
+            height: 30px;
+            background: url("../img/rub-big-icon.png") center no-repeat;
+
+          }
+        }
+        &_text {
+          line-height: 14px;
+        }
+      }
+      .fitment__buy-btn {
+        margin-top: 15px;
+        text-align: center;
+        .btn_red-border {
+          padding: 20px 75px 21px;
+        }
+      }
+    }
+  }
+}
+.block4 {
+  padding: 80px 0;
 }
 .block5 {
   padding: 80px 0;
@@ -122,39 +254,9 @@
     margin-bottom: 40px;
   }
   .gallery__item {
-    text-align: center;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    border: 2px solid transparent;
-    transition: all .4s ease;
     img {
-      border-radius: 8px;
-      width: 100%;
       max-width: 210px;
       height: 135px;
-    }
-  }
-  .gallery__photo:hover {
-    border: 2px solid #ffffff;
-    box-shadow: 0 0 50px rgba(59,89,152,.4);
-    opacity: .9;
-    background: #3b5998 url("../img/loop-icon.png") center no-repeat;
-    img {
-      opacity: .5;
-    }
-  }
-  .gallery__video {
-    border: 2px solid transparent;
-    opacity: .9;
-    background: #333333 url("../img/play-icon.png") center no-repeat;
-    img {
-      opacity: .5;
-    }
-    &:hover {
-      opacity: 1;
-      box-shadow: 0 0 50px rgba(0,0,0,.4);
-      border: 2px solid #ffffff;
     }
   }
 }

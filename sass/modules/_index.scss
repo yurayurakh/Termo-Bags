@@ -73,7 +73,7 @@
     position: relative;
     padding-bottom: 10px;
     margin-top: 0;
-  text-transform: uppercase;
+    text-transform: uppercase;
     &:after {
       position: absolute;
       left: 0;
@@ -84,6 +84,12 @@
       height: 3px;
       background: #4c75cb;
     }
+}
+
+.red-text {
+  font-size: 45px;
+  font-family: $main_font_familyBold;
+  color: #ff0000;
 }
 
 .green-border {
@@ -97,6 +103,43 @@
   font-family: $main_font_familyBold;
   border: 3px solid #ff0000;
   border-radius: 35px;
+}
+
+.gallery__item {
+  text-align: center;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  transition: all .4s ease;
+  img {
+    border-radius: 8px;
+    width: 100%;
+  }
+}
+
+.gallery__photo:hover {
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 50px rgba(59,89,152,.4);
+  opacity: .9;
+  background: #3b5998 url("../img/loop-icon.png") center no-repeat;
+  img {
+    opacity: .5;
+  }
+}
+
+.gallery__video {
+  border: 2px solid transparent;
+  opacity: .9;
+  background: #333333 url("../img/play-icon.png") center no-repeat;
+  img {
+    opacity: .5;
+  }
+  &:hover {
+    opacity: 1;
+    box-shadow: 0 0 50px rgba(0,0,0,.4);
+    border: 2px solid #ffffff;
+  }
 }
 
 // Подложка
