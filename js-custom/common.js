@@ -8,4 +8,8 @@ $(document).ready(function() {
         $(this).toggleClass("parameter-active");
         $(this).next().slideToggle(300);
     })
+    $(".list-item_link").click(function () {
+        var imgLink = $(this).children("img").attr("data-image");
+        $(this).parent().parent().prev().children("img").attr("src",imgLink);
+    })
 });

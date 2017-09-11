@@ -1,9 +1,233 @@
 // Adaptive
 @media (min-width:992px) and (max-width:1199px) {
+  .block3 {
+    .fitment__item_parameters .parameter__item_descr {
+      padding-left: 0;
+    }
+    .fitment__item .fitment__buy-inner {
+      .fitment__pricing .fitment__price {
+        font-size: 30px;
+      }
+      .fitment__pricing_text {
+        font-size: 14px;
+        margin-left: 10px;
+        line-height: 12px;
+      }
+    }
+  }
 }
 @media (min-width:768px) and (max-width:991px) {
-
+  .block1 {
+    background: $bg_color2;
+  }
+  .block3 {
+    .fitment__item {
+      .fitment__gallery {
+        margin-bottom: 20px;
+      }
+      .fitment__gallery_list .list-item {
+        width: 100px;
+        display: inline-block;
+        float: none;
+      }
+      .fitment__buy-inner {
+        .fitment__pricing_text {
+          font-size: 14px;
+          margin-left: 10px;
+          line-height: 12px;
+        }
+      }
+    }
+  }
+  .block6 {
+    .questions {
+      .question__inner {
+        margin-bottom: 10px;
+      }
+      .question__item {
+        .question {
+          padding: 10px;
+          font-size: 18px;
+        }
+        .question-open:after, .question-open:before {
+          width: 10px;
+        }
+        .hides-answer {
+          padding: 10px;
+        }
+      }
+    }
+  }
+  .block7 {
+    .title {
+      margin-bottom: 40px;
+    }
+    .social {
+      text-align: center;
+    }
+  }
 } 
 @media (max-width:767px) {
+  .block1 {
+    padding: 40px 0 50px;
+    background: $bg_color2;
+    .block1__title {
+      text-align: center;
+      .title__red-block {
+        margin-left: 0;
+        margin-top: 10px;
+        padding: 20px 24px 21px 24px;
+      }
+    }
+    .triger {
+      margin-bottom: 20px;
+      .triger__item {
+        margin-bottom: 20px;
+        text-align: center;
+        display: block;
+        margin-right: 0;
+      }
+    }
+    .equipment {
+      margin-bottom: 20px;
+      &__franch {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .red-text {
+        display: block;
+        text-align: center;
+        font-size: 30px;
+      }
+    }
+    .dop-info {
+      margin-bottom: 20px;
+      &__item {
+        margin-bottom: 20px;
+      }
+    }
+    .consultation {
+      text-align: center;
+      .btn_red-border {
+        padding: 20px 20px 21px;
+      }
+    }
+  }
+  .block2 {
+    padding: 40px 0 50px;
+    .main-bg_first .main-thing {
+      .title {
+        display: block;
+        text-align: center;
+        font-size: 32px;
+        margin: 0 0 10px 0;
+      }
+      .manual {
+        text-align: center;
+        margin: 0;
+        font-size: 16px;
+      }
+    }
+  }
+  .block3 {
+    .fitment__item {
+      .fitment__gallery {
+        margin-bottom: 20px;
+      }
+      .fitment__gallery_list .list-item {
+        width: 80px;
+        display: inline-block;
+        float: none;
+      }
+      &_parameters .parameter__item_descr {
+        padding-left: 0;
+        .descr__type {
+          display: block;
+          border: 2px solid  #f1f1f2;
+          margin-bottom: 20px;
+        }
+      }
+      .fitment__buy-inner {
+        .fitment__pricing {
+          .fitment__price {
+            margin: 0 0 10px;
+            display: block;
+            text-align: center;
+            padding: 0;
+            border-right: none;
+          }
+          .fitment__pricing_text {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .block5 {
+    padding: 40px 0;
+    text-align: center;
+    .title {
+      &:after {
+        right: 0;
+        margin: auto;
+      }
+    }
+    .gallery__item {
+      display: inline-block;
+    }
+  }
+  .block6 {
+    padding: 40px 0;
+    .title {
+      margin-bottom: 30px;
+    }
+    .questions {
+      .question__inner {
+        margin-bottom: 10px;
+      }
+      .question__item {
+        .question {
+          padding: 10px;
+          font-size: 18px;
+          img {
+            margin-right: 0;
+          }
+        }
+        .question-open:after, .question-open:before {
+          width: 10px;
+        }
+        .hides-answer {
+          padding: 10px;
+        }
+      }
+    }
+  }
+  .block7 {
+    padding: 40px 0;
+    .title {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+    .social {
+      text-align: center;
+      &__item {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .title {
+    font-size: 35px;
+  }
+}
 
+@media (min-width: 992px){
+  .five-block {
+    width: 20%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
