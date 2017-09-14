@@ -26,7 +26,7 @@
       color: #ffffff;
       text-transform: uppercase;
       font-size: 15px;
-      &:hover {
+      &:hover, &:active, &:focus  {
         //padding: 24px 17px 0;
         background: #4c75cb;
         font-size: 15px;
@@ -103,6 +103,13 @@
   font-family: $main_font_familyBold;
   border: 3px solid #ff0000;
   border-radius: 35px;
+  transition: all .3s ease;
+  &:hover, &:active, &:focus {
+    outline: 0;
+    color: #fff;
+    box-shadow: 0 0 30px rgba(255,0,0,.5);
+    background: linear-gradient(to top, #d21616, #ff0000);
+  }
 }
 
 .gallery__item {
@@ -161,5 +168,113 @@
 .bg2 {
   background: $bg_color2;
 }
+
+.point {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background: #3b5998;
+}
+
+// PoPuP
+
+.modal .modal-dialog {
+  width: 350px;
+  max-width: 450px;
+  margin-top: 60px;
+  border-radius: 0;
+  .modal-content {
+    text-align: center;
+    border-radius: 0;
+    .modal-header {
+      padding: 10px 15px 0;
+      border: 0;
+    }
+    .modal-body {
+      padding: 0;
+      .modal-title {
+        font-size: 20px;
+        font-family: $main_font_familyBold;
+        text-transform: uppercase;
+      }
+      .main-form {
+        padding: 0 20px 20px;
+        margin-top: 0;
+        .form-horizontal {
+          margin-top: 20px;
+          padding: 0 10px;
+          .labels {
+            display: block;
+            width: 100%;
+            border: 0;
+          }
+        }
+        .btn_red-border {
+          text-transform: uppercase;
+          padding: 15px 0;
+          width: 100%;
+          background: #ffffff;
+          &:hover, &:active, &:focus {
+            background: linear-gradient(to top, #d21616, #ff0000);
+          }
+        }
+      }
+      .success {
+        background-color: #fff;
+        color: #3bb038;
+        width: 90%;
+        margin: 10px auto 35px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.modal .modal-footer, .success-modal {
+  display: none;
+}
+
+.form-control {
+  text-align: center;
+  position: relative;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #eaeaea;
+}
+
+
+//Menu
+.hamburger{
+  background:none;
+  position:absolute;
+  top:0;
+  right:0;
+  line-height:45px;
+  padding:20px 15px 0px 15px;
+  color:#fff;
+  border:0;
+  font-size:2em;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+.cross{
+  background:none;
+  position:absolute;
+  top:0px;
+  right:0;
+  padding:0 15px 0px 15px;
+  color:#000;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:10000000000000;
+}
+
 
 

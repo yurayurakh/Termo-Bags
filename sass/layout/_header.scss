@@ -1,4 +1,7 @@
 .header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
   background: #3b5998;
   min-height: 70px;
   &__logo {

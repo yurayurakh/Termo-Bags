@@ -13,3 +13,28 @@ $(document).ready(function() {
         $(this).parent().parent().prev().children("img").attr("src",imgLink);
     })
 });
+
+$( document ).ready(function() {
+
+    var scr_w=screen.width;
+    if (scr_w < 1200) {
+        $( ".cross" ).hide();
+        $( ".nav" ).hide();
+        $( ".hamburger" ).click(function() {
+            $( ".nav" ).slideToggle( 400, function() {
+                $( ".hamburger" ).hide();
+                $( ".cross" ).show();
+            });
+        });
+
+        $( ".cross" ).click(function() {
+            $( ".nav" ).slideToggle( 400, function() {
+                $( ".cross" ).hide();
+                $( ".hamburger" ).show();
+            });
+        });
+    }
+
+
+
+});

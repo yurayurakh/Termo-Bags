@@ -1,4 +1,5 @@
 .block1 {
+  margin-top: 70px;
   padding: 80px 0 100px;
   background: $bg_color2 url("../img/bg1.jpg") center top no-repeat;
   .block1__title {
@@ -51,7 +52,6 @@
       font-size: 18px;
       font-family: $main_font_familyBold;
       display: inline-block;
-      margin-right: 30px;
       line-height: 1.2;
     }
   }
@@ -129,6 +129,7 @@
         }
       }
       &_list {
+        margin-bottom: 10px;
         text-align: center;
         .list-item {
           cursor: pointer;
@@ -250,7 +251,147 @@
   }
 }
 .block4 {
+  height: 900px;
+  position: relative;
   padding: 80px 0;
+  background: url("../img/bg4.jpg") center no-repeat;
+  .title {
+    margin-bottom: 40px;
+  }
+  .differences {
+    position: relative;
+    .difference__item {
+      margin-bottom: 30px;
+      .difference__title {
+        z-index: 2;
+        border-bottom: 1px solid #e3e3e3;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        position: relative;
+        font-size: 18px;
+        color: #3b5998;
+        font-family: $main_font_familyBold;
+        &:before,  &:after {
+          content: "";
+          position: absolute;
+        }
+        &:before {
+          height: 1px;
+          background: #e3e3e3;
+
+        }
+        &:after {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 2px solid #ffffff;
+          background: #3b5998;
+        }
+      }
+      .difference1:after {
+        top: 322px;
+        right: -84px;
+      }
+      .difference1:before {
+        width: 321px;
+        transform: rotate(76deg);
+        right: -199px;
+        top: 185px;
+      }
+
+      .difference2:after {
+        top: 192px;
+        left: -322px;
+      }
+      .difference2:before {
+        width: 358px;
+        transform: rotate(151deg);
+        left: -336px;
+        top: 116px;
+      }
+
+      .difference3:after {
+        top: 205px;
+        right: -109px;
+      }
+      .difference3:before {
+        width: 195px;
+        transform: rotate(59deg);
+        right: -148px;
+        top: 136px;
+      }
+
+      .difference4:after {
+        top: 81px;
+        left: -286px;
+      }
+      .difference4:before {
+        width: 273px;
+        transform: rotate(173deg);
+        left: -272px;
+        top: 70px;
+      }
+
+      .difference5:after {
+        top: 47px;
+        right: -66px;
+      }
+      .difference5:before {
+        width: 62px;
+        transform: rotate(25deg);
+        right: -59px;
+        top: 42px;
+      }
+
+      .difference6:after {
+        top: 5px;
+        left: -106px;
+      }
+      .difference6:before {
+        width: 95px;
+        transform: rotate(201deg);
+        left: -91px;
+        top: 36px;
+      }
+
+      .difference7:after {
+        top: -63px;
+        right: -76px;
+      }
+      .difference7:before {
+        width: 99px;
+        transform: rotate(-50deg);
+        right: -81px;
+        top: -9px;
+      }
+
+      .difference8:after {
+        top: -108px;
+        left: -189px;
+      }
+      .difference8:before {
+        width: 240px;
+        transform: rotate(220deg);
+        left: -212px;
+        top: -24px;
+      }
+    }
+
+    .item_6 {
+      margin-bottom: 80px;
+    }
+
+    .bags {
+      width: 540px;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
 }
 .block5 {
   padding: 80px 0;

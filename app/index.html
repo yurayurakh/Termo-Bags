@@ -32,49 +32,434 @@
 
     <!-- Add Media helper (this is optional) -->
     <script type="text/javascript" src="plugins/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter45928473 = new Ya.Metrika({
+                        id:45928473,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/45928473" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 
 </head>
 <body>
+    <div class="modal fade" id="getCall" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close close-modal" type="button" data-dismiss="modal">x</button>
+                </div>
+                <div class="modal-body">
+                    <div class="main-form form">
+                        <h2 class="modal-title">
+                            Оставьте вашу заявку
+                        </h2>
+                        <p>
+                            и мы свяжемся с вами<br/>
+                            в кратчайшее время
+                        </p>
+                        <form class="form-horizontal" data-target="zakaz_zvonok" role="form" method="post">
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="name-call" name="name" class="form-control" placeholder="Введите ваше имя">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="tel-call" class="labels">
+                                        <input type="tel" name="phone" id="tel-call" class="form-control" placeholder="Введите ваш телефон">
+                                    </label>
+                                </div>
+                            </div>
+                            <input type="hidden" name="type-form" value="getCall">
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <input type="submit" class="btn_red-border" value="Отправить">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="getConsultation" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close close-modal" type="button" data-dismiss="modal">x</button>
+                </div>
+                <div class="modal-body">
+                    <div class="main-form form">
+                        <h2 class="modal-title">
+                            Оставьте вашу заявку
+                        </h2>
+                        <p>
+                            и мы свяжемся с вами<br/>
+                            в кратчайшее время
+                        </p>
+                        <form class="form-horizontal" role="form" method="post">
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="name-consultation" name="name" class="form-control" placeholder="Введите ваше имя">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="tel-call" class="labels">
+                                        <input type="tel" name="phone" id="tel-consultation" class="form-control" placeholder="Введите ваш телефон">
+                                    </label>
+                                </div>
+                            </div>
+                            <input type="hidden" name="type-form" value="getConsultation">
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <input type="submit" class="btn_red-border" value="Отправить">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="getOrder1" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close close-modal" type="button" data-dismiss="modal">x</button>
+                </div>
+                <div class="modal-body">
+                    <div class="main-form form">
+                        <h2 class="modal-title">
+                            Оставьте вашу заявку
+                        </h2>
+                        <p>
+                            для уточчнения всех деталей<br/>
+                            по оплате и доставке
+                        </p>
+                        <form class="form-horizontal" data-target="zakaz_oborud" role="form" method="post">
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="name-order1" name="name" class="form-control" placeholder="Введите ваше Ф.И.О.">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="tel-call" class="labels">
+                                        <input type="tel" name="phone" id="tel-order1" class="form-control" placeholder="Введите ваш телефон">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="address-order1" name="address" class="form-control" placeholder="Адрес доставки">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="index-order1" name="index" class="form-control" placeholder="Почтовый индекс">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="shipping-order1" name="shipping" class="form-control" placeholder="Способ оплаты">
+                                    </label>
+                                </div>
+                            </div>
+                            <input type="hidden" name="type-form" value="getOrder1">
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <input type="submit" class="btn_red-border" value="Заказать">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="getOrder2" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close close-modal" type="button" data-dismiss="modal">x</button>
+                </div>
+                <div class="modal-body">
+                    <div class="main-form form">
+                        <h2 class="modal-title">
+                            Оставьте вашу заявку
+                        </h2>
+                        <p>
+                            для уточчнения всех деталей<br/>
+                            по оплате и доставке
+                        </p>
+                        <form class="form-horizontal" data-target="zakaz_oborud" role="form" method="post">
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="name-order2" name="name" class="form-control" placeholder="Введите ваше Ф.И.О.">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="tel-call" class="labels">
+                                        <input type="tel" name="phone" id="tel-order2" class="form-control" placeholder="Введите ваш телефон">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="address-order2" name="address" class="form-control" placeholder="Адрес доставки">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="index-order2" name="index" class="form-control" placeholder="Почтовый индекс">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="shipping-order2" name="shipping" class="form-control" placeholder="Способ оплаты">
+                                    </label>
+                                </div>
+                            </div>
+                            <input type="hidden" name="type-form" value="getOrder2">
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <input type="submit" class="btn_red-border" value="Заказать">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="getOrder3" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close close-modal" type="button" data-dismiss="modal">x</button>
+                </div>
+                <div class="modal-body">
+                    <div class="main-form form">
+                        <h2 class="modal-title">
+                            Оставьте вашу заявку
+                        </h2>
+                        <p>
+                            для уточчнения всех деталей<br/>
+                            по оплате и доставке
+                        </p>
+                        <form class="form-horizontal" data-target="zakaz_oborud" role="form" method="post">
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="name-order3" name="name" class="form-control" placeholder="Введите ваше Ф.И.О.">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="tel-call" class="labels">
+                                        <input type="tel" name="phone" id="tel-order3" class="form-control" placeholder="Введите ваш телефон">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="address-order3" name="address" class="form-control" placeholder="Адрес доставки">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="index-order3" name="index" class="form-control" placeholder="Почтовый индекс">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="shipping-order3" name="shipping" class="form-control" placeholder="Способ оплаты">
+                                    </label>
+                                </div>
+                            </div>
+                            <input type="hidden" name="type-form" value="getOrder3">
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <input type="submit" class="btn_red-border" value="Заказать">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="getOrder4" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close close-modal" type="button" data-dismiss="modal">x</button>
+                </div>
+                <div class="modal-body">
+                    <div class="main-form form">
+                        <h2 class="modal-title">
+                            Оставьте вашу заявку
+                        </h2>
+                        <p>
+                            для уточчнения всех деталей<br/>
+                            по оплате и доставке
+                        </p>
+                        <form class="form-horizontal" data-target="zakaz_oborud" role="form" method="post">
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="name-order4" name="name" class="form-control" placeholder="Введите ваше Ф.И.О.">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="tel-call" class="labels">
+                                        <input type="tel" name="phone" id="tel-order4" class="form-control" placeholder="Введите ваш телефон">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="address-order4" name="address" class="form-control" placeholder="Адрес доставки">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="index-order4" name="index" class="form-control" placeholder="Почтовый индекс">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <label for="name-call" class="labels">
+                                        <input type="text" id="shipping-order4" name="shipping" class="form-control" placeholder="Способ оплаты">
+                                    </label>
+                                </div>
+                            </div>
+                            <input type="hidden" name="type-form" value="getOrder4">
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <input type="submit" class="btn_red-border" value="Заказать">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close close-modal" type="button" data-dismiss="modal">x</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row form-list-forms">
+                        <form class="form-inline" method="post">
+                            <div class="success">
+                                <p>Спасибо за заявку! </p>
+                                <span>Наш менеджер свяжется с Вами!</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button>
+                    <button data-toggle="modal" data-target="#myModal">Сохранить изменения</button></div>
+                <!--Button click when form send data -->
+                <button data-toggle="modal" data-target="#successModal" class="success-modal has-error has-success">Сохранить изменения</button>
+            </div>
+        </div>
+    </div>
     <div class="wrapper">
         <header class="header">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-1">
+                    <div class="col-md-1 col-sm-2 col-xs-3">
                         <a href="/" class="header__logo logo">
                             <img src="img/logo.png" alt="logo">
                         </a>
                     </div>
-                    <div class="col-sm-9">
+                    <div class="col-lg-9 col-md-5 col-lg-push-0 col-md-push-6 col-sm-6 col-sm-push-4">
                         <div class="row">
+                            <button class="hamburger hidden-lg">&#9776;</button>
+                            <button class="cross hidden-lg">&#735;</button>
                             <nav class="nav">
                                 <ul class="nav__list">
                                     <li class="nav__item">
-                                        <a href="" class="nav__item_link">
+                                        <a href="#advantage" class="nav__item_link scroll-to">
                                             Преимущества
                                         </a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="" class="nav__item_link">
-                                            Вы получаете
-                                        </a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="" class="nav__item_link">
-                                            Ваша прибыль
-                                        </a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="" class="nav__item_link">
-                                            Пакеты
-                                        </a>
-                                    </li>
-                                    <li class="nav__item">
-                                        <a href="" class="nav__item_link">
+                                        <a href="#bundle" class="nav__item_link scroll-to">
                                             Оборудование
                                         </a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="" class="nav__item_link">
+                                        <a href="#equipment" class="nav__item_link scroll-to">
+                                            Как отличить
+                                        </a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="#gallery" class="nav__item_link scroll-to">
+                                            ГАЛЕРЕЯ
+                                        </a>
+                                    </li>
+                                    <li class="nav__item">
+                                        <a href="#faq" class="nav__item_link scroll-to">
                                             FAQ
                                         </a>
                                     </li>
@@ -82,7 +467,7 @@
                             </nav>
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-4 col-lg-pull-0 col-md-pull-2 col-sm-pull-4 col-sm-4 col-xs-12">
                         <div class="row">
                             <div class="phone-block">
                                 <div class="phone-icon">
@@ -90,10 +475,10 @@
                                 </div>
                                 <div class="tel">
                                     <div class="tel-number">
-                                        +7 (4722) 41-10-31
+                                        +7 (846) 990-19-22
                                     </div>
                                 </div>
-                                <a href="#" class="phone-order">
+                                <a href="#" data-toggle="modal" data-target="#getCall" class="phone-order">
                                     Заказать звонок
                                 </a>
                             </div>
@@ -119,7 +504,7 @@
                                     <img src="img/calendar-icon.png" alt="calendar-icon">
                                 </div>
                                 <div class="triger__item_text">
-                                    УЖЕ К 1-ГО ДЕКАБРЯ
+                                    УЖЕ К 1 ДЕКАБРЯ
                                 </div>
                             </div>
                             <div class="triger__item">
@@ -131,10 +516,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="model-bag hidden visible-xs">
+                            <img src="img/model-bag.png" alt="model-bag">
+                        </div>
                         <h2 class="equipment green-border">
                             <span class="equipment__franch">
-                                С оборудованием<br/>
-                                на франшизу от
+                                НА ФРАНШИЗЕ<br/>
+                                С ОБОРУДОВАНИЕМ
+
                             </span>
                             <span class="red-text">
                                     TERMORUKZAKI.RU
@@ -151,7 +540,7 @@
                             </span>
                         </div>
                         <div class="consultation">
-                            <a href="#" class="btn_red-border">
+                            <a href="#" data-toggle="modal" data-target="#getConsultation" class="btn_red-border">
                                 Получить консультацию
                             </a>
                         </div>
@@ -166,7 +555,7 @@
                 </div>
             </div>
         </section>
-        <section class="block2">
+        <section class="block2" id="advantage">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
@@ -308,7 +697,7 @@
                 </div>
             </div>
         </section>
-        <section class="block3 bg2">
+        <section class="block3 bg2" id="bundle">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -322,22 +711,22 @@
                         <div class="col-md-4">
                             <div class="fitment__gallery">
                                 <div class="fitment__gallery_choose">
-                                    <img src="img/equipment1_max.jpg" alt="equipment1">
+                                    <img src="img/mob-magaz-1.jpg" alt="mob-magaz-1">
                                 </div>
                                 <div class="fitment__gallery_list clearfix">
                                     <div class="list-item gallery__item gallery__photo">
                                         <div class="list-item_link">
-                                            <img src="img/equipment3.jpg" data-image="img/equipment1_max.jpg" alt="equipment1">
+                                            <img src="img/mob-magaz-1.jpg" data-image="img/mob-magaz-1.jpg" alt="equipment1">
                                         </div>
                                     </div>
                                     <div class="list-item gallery__item gallery__photo">
                                         <div class="list-item_link">
-                                            <img src="img/equipment2.jpg" data-image="img/equipment2_max.jpg" alt="equipment1">
+                                            <img src="img/mob-magaz-2.jpg" data-image="img/mob-magaz-2.jpg" alt="equipment1">
                                         </div>
                                     </div>
                                     <div class="list-item gallery__item gallery__photo">
                                         <div class="list-item_link">
-                                            <img src="img/equipment3.jpg" data-image="img/equipment1_max.jpg" alt="equipment1">
+                                            <img src="img/mob-magaz-3.jpg" data-image="img/mob-magaz-3.jpg" alt="equipment1">
                                         </div>
                                     </div>
                                 </div>
@@ -346,7 +735,7 @@
                         <div class="col-md-8">
                             <div class="fitment__item_title">
                                 <h2>
-                                    Терморюкзак
+                                    Мобильный магазин
                                 </h2>
                             </div>
                             <div class="fitment__item_description">
@@ -367,9 +756,48 @@
                                         </span>
                                     </div>
                                     <div class="parameter__item_descr hides-answer">
-                                        <div class="descr-text">
-                                            Оборудование универсальное и имеет общую разгрузочную систему, а может использоваться
-                                            по отдельности.
+                                        <div class="descr-text clearfix">
+                                            <div class="col-sm-6">
+                                                <p><strong>Размер:</strong> ш.350 мм ,д.350 мм ,в. 720 мм</p>
+                                                <p><strong>Давление:</strong> атмосферное (самоток)</p>
+                                                <p>Тип используемой жидкости: горячие, холодные,
+                                                негазированные напитки</p>
+                                                <p><strong>Размер рекламной плоскости:</strong> 700 мм х 400 мм</p>
+                                                <p>
+                                                    <strong>Комплектация</strong>
+                                                </p>
+                                                <p><strong>Емкость</strong>: Объем: 12 л</p>
+                                                <p>
+                                                <strong>Материал:</strong> пищевая нержавеющая сталь
+                                                </p>
+                                                <p>
+                                                    Имеются одна горловина, закрывается крышкой, с
+                                                    клапаном для стравливания избыточного давления
+                                                </p>
+                                                <p>
+                                                    <strong> Кран Материал:</strong> пластик
+                                                </p>
+                                                <p>
+                                                    <strong> Шланг:</strong> 5-ти слойный с термозащитой и
+                                                    армированием
+                                                </p>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <p><strong>Материал:</strong> экокожа, комбинированная</p>
+                                                <p><strong>Регулируемая подвесная система:</strong></p>
+                                                <p>полностью вентилируемая спина;</p>
+                                                <p>анатомическая усиленная конструкция</p>
+                                                <p>вентилируемого поясного ремня</p>
+                                                <p>анатомическая конструкция вентилируемых</p>
+                                                <p>плечевых лямок, регулируемая по высоте;</p>
+                                                <p>грудная стяжка;</p>
+                                                <p>Нагрузка, выдерживаемая и подвесной системой -50 кг</p>
+                                                <p><strong>Диспенсер для стаканов:</strong></p>
+                                                <p><strong>Материал:</strong> пластик</p>
+                                                <p>11,3 х 10,2 х 43,5 см</p>
+                                                <p>Подходит для различных пластиковых и бумажных</p>
+                                                <p>стаканов, объемом как 100 мл, так и 500 мл</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -390,10 +818,18 @@
                                         </div>
                                         <div class="descr__type">
                                             <div class="descr__type_name">
+                                                Еда, руб
+                                            </div>
+                                            <div class="descr__type_value">
+                                                2 500
+                                            </div>
+                                        </div>
+                                        <div class="descr__type">
+                                            <div class="descr__type_name">
                                                 итого/день, руб
                                             </div>
                                             <div class="descr__type_value">
-                                                4 000
+                                                6 500
                                             </div>
                                         </div>
                                         <div class="descr__type">
@@ -401,7 +837,7 @@
                                                 итого/месяц, руб
                                             </div>
                                             <div class="descr__type_value">
-                                                12 000
+                                                195 000
                                             </div>
                                         </div>
                                         <div class="descr__type">
@@ -409,7 +845,7 @@
                                                 итого/год, руб
                                             </div>
                                             <div class="descr__type_value">
-                                                720 000
+                                                1 170 000
                                             </div>
                                         </div>
                                     </div>
@@ -445,7 +881,7 @@
                                 </div>
                                 <div class="col-sm-5">
                                     <div class="fitment__buy-btn">
-                                        <a href="#" class="btn_red-border">
+                                        <a href="#" data-toggle="modal" data-target="#getOrder1" class="btn_red-border">
                                             Заказать
                                         </a>
                                     </div>
@@ -457,22 +893,22 @@
                         <div class="col-md-4">
                             <div class="fitment__gallery">
                                 <div class="fitment__gallery_choose">
-                                    <img src="img/equipment1_max.jpg" alt="equipment1">
+                                    <img src="img/termo-rukzak-1.jpg" alt="termo-rukzak-1">
                                 </div>
                                 <div class="fitment__gallery_list clearfix">
                                     <div class="list-item gallery__item gallery__photo">
                                         <div class="list-item_link">
-                                            <img src="img/equipment3.jpg" data-image="img/equipment1_max.jpg" alt="equipment1">
+                                            <img src="img/termo-rukzak-1.jpg" data-image="img/termo-rukzak-1.jpg" alt="termo-rukzak-1">
                                         </div>
                                     </div>
                                     <div class="list-item gallery__item gallery__photo">
                                         <div class="list-item_link">
-                                            <img src="img/equipment2.jpg" data-image="img/equipment2_max.jpg" alt="equipment1">
+                                            <img src="img/termo-rukzak-2.jpg" data-image="img/termo-rukzak-2.jpg" alt="termo-rukzak-2">
                                         </div>
                                     </div>
                                     <div class="list-item gallery__item gallery__photo">
                                         <div class="list-item_link">
-                                            <img src="img/equipment3.jpg" data-image="img/equipment1_max.jpg" alt="equipment1">
+                                            <img src="img/termo-rukzak-3.jpg" data-image="img/termo-rukzak-3.jpg" alt="termo-rukzak-3">
                                         </div>
                                     </div>
                                 </div>
@@ -486,12 +922,7 @@
                             </div>
                             <div class="fitment__item_description">
                                 <p>
-                                    Мобильный магазин для одновременной продажи продуктов и напитков, что позволяет закрыть
-                                    максимум потребностей покупателей.
-                                </p>
-                                <p>
-                                    Оборудование универсальное и имеет общую разгрузочную систему, а может использоваться
-                                    по отдельности.
+                                    Наши терморюкзаки - это боевые танки, прошедшие огонь и воду. В процессе торговли на своём оборудовании, мы модернизировали все узлы. Теперь это эффективнейший инструмент для быстрых продаж.
                                 </p>
                             </div>
                             <div class="fitment__item_parameters">
@@ -503,8 +934,19 @@
                                     </div>
                                     <div class="parameter__item_descr hides-answer">
                                         <div class="descr-text">
-                                            Оборудование универсальное и имеет общую разгрузочную систему, а может использоваться
-                                            по отдельности.
+                                            <ul>
+                                                <li>пищевые материалы</li>
+                                                <li>сварные соединения</li>
+                                                <li>герметичная ёмкость</li>
+                                                <li>универсальный диспенсер для стаканов</li>
+                                                <li>эко-кожа, легко моется и прочная</li>
+                                                <li>двух-слойная термозащита( сохраняет температуру напитка 4-6 часов)</li>
+                                                <li>термоизолированнный 5-ти слойный шланг</li>
+                                                <li>быстрая замена рекламных материалов</li>
+                                                <li>сумка-органайзер</li>
+                                                <li>удобная подвесная система</li>
+                                                <li>любой цвет</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -536,7 +978,7 @@
                                                 итого/месяц, руб
                                             </div>
                                             <div class="descr__type_value">
-                                                12 000
+                                                120 000
                                             </div>
                                         </div>
                                         <div class="descr__type">
@@ -559,7 +1001,7 @@
                                                     <div class="col-sm-7">
                                                         <div class="row">
                                                             <div class="fitment__price">
-                                                                29 900
+                                                                23 900
                                                                 <span class="currency"></span>
                                                             </div>
                                                         </div>
@@ -580,7 +1022,7 @@
                                 </div>
                                 <div class="col-sm-5">
                                     <div class="fitment__buy-btn">
-                                        <a href="#" class="btn_red-border">
+                                        <a href="#" data-toggle="modal" data-target="#getOrder2" class="btn_red-border">
                                             Заказать
                                         </a>
                                     </div>
@@ -592,22 +1034,22 @@
                         <div class="col-md-4">
                             <div class="fitment__gallery">
                                 <div class="fitment__gallery_choose">
-                                    <img src="img/equipment1_max.jpg" alt="equipment1">
+                                    <img src="img/mob-roznos-1.jpg" alt="mob-roznos-1">
                                 </div>
                                 <div class="fitment__gallery_list clearfix">
                                     <div class="list-item gallery__item gallery__photo">
                                         <div class="list-item_link">
-                                            <img src="img/equipment3.jpg" data-image="img/equipment1_max.jpg" alt="equipment1">
+                                            <img src="img/mob-roznos-1.jpg" data-image="img/mob-roznos-1.jpg" alt="mob-roznos-1">
                                         </div>
                                     </div>
                                     <div class="list-item gallery__item gallery__photo">
                                         <div class="list-item_link">
-                                            <img src="img/equipment2.jpg" data-image="img/equipment2_max.jpg" alt="equipment1">
+                                            <img src="img/mob-roznos-2_min.jpg" data-image="img/mob-roznos-2_min.jpg" alt="mob-roznos-2">
                                         </div>
                                     </div>
                                     <div class="list-item gallery__item gallery__photo">
                                         <div class="list-item_link">
-                                            <img src="img/equipment3.jpg" data-image="img/equipment1_max.jpg" alt="equipment1">
+                                            <img src="img/mob-roznos-3.jpg" data-image="img/mob-roznos-3.jpg" alt="mob-roznos-3">
                                         </div>
                                     </div>
                                 </div>
@@ -616,17 +1058,15 @@
                         <div class="col-md-8">
                             <div class="fitment__item_title">
                                 <h2>
-                                    Терморюкзак
+                                    Терморазнос
                                 </h2>
                             </div>
                             <div class="fitment__item_description">
                                 <p>
-                                    Мобильный магазин для одновременной продажи продуктов и напитков, что позволяет закрыть
-                                    максимум потребностей покупателей.
+                                    Универсальный терморазнос mini предназначен для разносной торговли продуктами питания или фасованными напитками, включая 0,5 л бутылки, высотой 21 см.
                                 </p>
                                 <p>
-                                    Оборудование универсальное и имеет общую разгрузочную систему, а может использоваться
-                                    по отдельности.
+                                    В комплекте идут два вида крепления: на подвесную систему терморюкзака и отдельная разгрузочная система подвеса.
                                 </p>
                             </div>
                             <div class="fitment__item_parameters">
@@ -637,9 +1077,22 @@
                                         </span>
                                     </div>
                                     <div class="parameter__item_descr hides-answer">
-                                        <div class="descr-text">
-                                            Оборудование универсальное и имеет общую разгрузочную систему, а может использоваться
-                                            по отдельности.
+                                        <div class="descr-text clearfix">
+                                            <div class="col-sm-6">
+                                                <p><strong>размер терморазноса:</strong></p>
+                                                <p>220 мм х 350 мм х 400 мм</p>
+                                                <p><strong>размер рекламных поверхностей:</strong></p>
+                                                <p>840 мм х 180 мм</p>
+                                                <p>350 мм х 180 мм</p>
+                                                <p>410 мм х 200 мм</p>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <p><strong>материал:</strong></p>
+                                                <p>экокожа комбинированная,</p>
+                                                <p><strong>регулируемая подвесная система:</strong></p>
+                                                <p>анатомическая конструкция вентилируемого поясного ремня и плечевых лямок, регулировка по росту человека.</p>
+                                                <p><strong>выдерживаемая нагрузка:</strong> 25 кг</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -671,7 +1124,7 @@
                                                 итого/месяц, руб
                                             </div>
                                             <div class="descr__type_value">
-                                                12 000
+                                                120 000
                                             </div>
                                         </div>
                                         <div class="descr__type">
@@ -694,7 +1147,7 @@
                                                     <div class="col-sm-7">
                                                         <div class="row">
                                                             <div class="fitment__price">
-                                                                29 900
+                                                                11 900
                                                                 <span class="currency"></span>
                                                             </div>
                                                         </div>
@@ -715,7 +1168,7 @@
                                 </div>
                                 <div class="col-sm-5">
                                     <div class="fitment__buy-btn">
-                                        <a href="#" class="btn_red-border">
+                                        <a href="#" data-toggle="modal" data-target="#getOrder3" class="btn_red-border">
                                             Заказать
                                         </a>
                                     </div>
@@ -727,22 +1180,22 @@
                         <div class="col-md-4">
                             <div class="fitment__gallery">
                                 <div class="fitment__gallery_choose">
-                                    <img src="img/equipment1_max.jpg" alt="equipment1">
+                                    <img src="img/universal-bag-1.png" alt="universal-bag-1">
                                 </div>
                                 <div class="fitment__gallery_list clearfix">
                                     <div class="list-item gallery__item gallery__photo">
                                         <div class="list-item_link">
-                                            <img src="img/equipment3.jpg" data-image="img/equipment1_max.jpg" alt="equipment1">
+                                            <img src="img/universal-bag-1.png" data-image="img/universal-bag-1.png" alt="universal-bag-1">
                                         </div>
                                     </div>
                                     <div class="list-item gallery__item gallery__photo">
                                         <div class="list-item_link">
-                                            <img src="img/equipment2.jpg" data-image="img/equipment2_max.jpg" alt="equipment1">
+                                            <img src="img/universal-bag-2.png" data-image="img/universal-bag-2.png" alt="universal-bag-2">
                                         </div>
                                     </div>
                                     <div class="list-item gallery__item gallery__photo">
                                         <div class="list-item_link">
-                                            <img src="img/equipment3.jpg" data-image="img/equipment1_max.jpg" alt="equipment1">
+                                            <img src="img/universal-bag-3.png" data-image="img/universal-bag-3.png" alt="universal-bag-3">
                                         </div>
                                     </div>
                                 </div>
@@ -751,17 +1204,14 @@
                         <div class="col-md-8">
                             <div class="fitment__item_title">
                                 <h2>
-                                    Терморюкзак
+                                    Универсальный рюкзак
                                 </h2>
                             </div>
                             <div class="fitment__item_description">
                                 <p>
-                                    Мобильный магазин для одновременной продажи продуктов и напитков, что позволяет закрыть
-                                    максимум потребностей покупателей.
-                                </p>
-                                <p>
-                                    Оборудование универсальное и имеет общую разгрузочную систему, а может использоваться
-                                    по отдельности.
+                                    Универсальный рюкзак:
+                                    Загрузка сверху, выдача снизу по бокам, вместимость от 20 до 40 бутылок,
+                                    сменные рекламные поверхности, стенки с термоизолацией.
                                 </p>
                             </div>
                             <div class="fitment__item_parameters">
@@ -773,8 +1223,16 @@
                                     </div>
                                     <div class="parameter__item_descr hides-answer">
                                         <div class="descr-text">
-                                            Оборудование универсальное и имеет общую разгрузочную систему, а может использоваться
-                                            по отдельности.
+                                            <p>
+                                                <strong>Размеры</strong>
+                                            </p>
+                                            <p>высота 600мм</p>
+                                            <p>ширина 300мм</p>
+                                            <p>глубина 250мм</p>
+                                            <p>
+                                                Загрузка сверху, выдача снизу по бокам, вместимость от 20 до 40 бутылок,
+                                                сменные рекламные поверхности, стенки с термоизолацией.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -790,7 +1248,7 @@
                                                 Напитки, руб
                                             </div>
                                             <div class="descr__type_value">
-                                                4 000
+                                                2 500
                                             </div>
                                         </div>
                                         <div class="descr__type">
@@ -798,7 +1256,7 @@
                                                 итого/день, руб
                                             </div>
                                             <div class="descr__type_value">
-                                                4 000
+                                                2 500
                                             </div>
                                         </div>
                                         <div class="descr__type">
@@ -806,7 +1264,7 @@
                                                 итого/месяц, руб
                                             </div>
                                             <div class="descr__type_value">
-                                                12 000
+                                                75 000
                                             </div>
                                         </div>
                                         <div class="descr__type">
@@ -814,7 +1272,7 @@
                                                 итого/год, руб
                                             </div>
                                             <div class="descr__type_value">
-                                                720 000
+                                                450 000
                                             </div>
                                         </div>
                                     </div>
@@ -850,7 +1308,7 @@
                                 </div>
                                 <div class="col-sm-5">
                                     <div class="fitment__buy-btn">
-                                        <a href="#" class="btn_red-border">
+                                        <a href="#" data-toggle="modal" data-target="#getOrder4" class="btn_red-border">
                                             Заказать
                                         </a>
                                     </div>
@@ -861,21 +1319,129 @@
                 </div>
             </div>
         </section>
-        <section class="block4">
+        <section class="block4" id="equipment">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <h2 class="title">
-                            КАК ОТЛИЧИТЬ подлинность<br/>
+                            КАК ОТЛИЧИТЬ ПОДЛИННЫЕ<br/>
                             <span class="red-text">
-                            TERMORUKZAKI.RU
+                            TERMORUKZAKI
                         </span>
                         </h2>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="differences clearfix">
+                        <div class="photo_bag hidden visible-sm visible-xs col-sm-6 col-xs-12">
+                            <img src="img/red-bags.png" alt="red-bags">
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-6 col-sm-offset-0 col-xs-offset-0 col-md-offset-1">
+                            <div class="difference__item">
+                                <div class="difference__title difference1">
+                                    Пищевые материалы
+                                </div>
+                                <div class="difference__text">
+                                    Мы используем только пищевые
+                                    материалы, даже шланг насоса
+                                    заменен на пищевой силикон
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-6 col-sm-offset-0 col-xs-offset-0 col-md-offset-4">
+                            <div class="difference__item">
+                                <div class="difference__title difference2">
+                                    Опрессованные соединения
+                                </div>
+                                <div class="difference__text">
+                                    Промышленный обжим соединений
+                                    предотвращает протекание, что
+                                    увеличивает удобство и скорость продаж
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-6">
+                            <div class="difference__item">
+                                <div class="difference__title difference3">
+                                    Термоизолированный<br/>
+                                    шланг подачи напитка
+                                </div>
+                                <div class="difference__text">
+                                    Это сохраняет температуру
+                                    напитка в шланге
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-6 col-sm-offset-0 col-xs-offset-0 col-md-offset-6">
+                            <div class="difference__item">
+                                <div class="difference__title difference4">
+                                    Двухслойная<br/>
+                                    термозащита
+                                </div>
+                                <div class="difference__text">
+                                    Зимой и летом температура
+                                    напитка в рюкзаке сохраняется
+                                    в течение 6 часов
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-6">
+                            <div class="difference__item">
+                                <div class="difference__title difference5">
+                                    Герметичная емкость
+                                </div>
+                                <div class="difference__text">
+                                    Нержавеющая сталь, плотно
+                                    закрывающаяся крышка
+                                    обеспечивает защиту от
+                                    протекания даже в
+                                    перевернутом виде
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-6 col-sm-offset-0 col-xs-offset-0 col-md-offset-6">
+                            <div class="difference__item item_6">
+                                <div class="difference__title difference6">
+                                    Быстрая замена<br/>
+                                    рекламных материалов
+                                </div>
+                                <div class="difference__text">
+                                    Время - деньги. Карманы для
+                                    рекламы также защищены от влаги
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-6 col-sm-offset-0 col-xs-offset-0 col-md-offset-1">
+                            <div class="difference__item">
+                                <div class="difference__title difference7">
+                                    Моющийся материал
+                                </div>
+                                <div class="difference__text">
+                                    Скорость и удобство
+                                    обслуживания терморюкзака
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-6 col-sm-offset-0 col-xs-offset-0 col-md-offset-4">
+                            <div class="difference__item">
+                                <div class="difference__title difference8">
+                                    Универсальный
+                                    диспенсер для стаканов
+                                </div>
+                                <div class="difference__text">
+                                    Время - деньги. Карманы для
+                                    рекламы также защищены от влаги
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bags">
+                            <img src="img/red-bags.png" alt="red-bags">
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="block5 bg2">
+        <section class="block5 bg2" id="gallery">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
@@ -885,115 +1451,150 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="five-block col-sm-4">
+                    <div class="five-block col-sm-4 col-xs-6">
                         <div class="gallery__item gallery__photo">
                             <a rel="photo_group" href="img/gallery/gallery1_link.jpg">
                                 <img src="img/gallery/gallery1.jpg" alt="gallery1">
                             </a>
                         </div>
                     </div>
-                    <div class="five-block col-sm-4">
+                    <div class="five-block col-sm-4 col-xs-6">
                         <div class="gallery__item gallery__photo">
                             <a rel="photo_group" href="img/gallery/gallery2_link.jpg">
                                 <img src="img/gallery/gallery2_link.jpg" alt="gallery1">
                             </a>
                         </div>
                     </div>
-                    <div class="five-block col-sm-4">
+                    <div class="five-block col-sm-4 col-xs-6">
                         <div class="gallery__item gallery__photo">
-                            <a rel="photo_group" href="img/gallery/gallery2_link.jpg">
-                                <img src="img/gallery/gallery1.jpg" alt="gallery1">
+                            <a rel="photo_group" href="img/gallery/gallery3_link.jpg">
+                                <img src="img/gallery/gallery3.jpg" alt="gallery3">
                             </a>
                         </div>
                     </div>
-                    <div class="five-block col-sm-4">
+                    <div class="five-block col-sm-4 col-xs-6 hidden-xs">
                         <div class="gallery__item gallery__photo">
-                            <a rel="photo_group" href="img/gallery/gallery2_link.jpg">
-                                <img src="img/gallery/gallery1.jpg" alt="gallery1">
+                            <a rel="photo_group" href="img/gallery/gallery4_link.jpg">
+                                <img src="img/gallery/gallery4.jpg" alt="gallery4">
                             </a>
                         </div>
                     </div>
-                    <div class="five-block col-sm-4">
+                    <div class="five-block col-sm-4 col-xs-6 hidden-xs">
                         <div class="gallery__item gallery__photo">
-                            <a rel="photo_group" href="img/gallery/gallery2_link.jpg">
-                                <img src="img/gallery/gallery1.jpg" alt="gallery1">
+                            <a rel="photo_group" href="img/gallery/gallery5_link.jpg">
+                                <img src="img/gallery/gallery5.jpg" alt="gallery5">
                             </a>
                         </div>
                     </div>
-                    <div class="five-block col-sm-4">
+                    <div class="five-block col-sm-4 col-xs-6">
+                        <div class="gallery__item gallery__photo">
+                            <a rel="photo_group" href="img/gallery/gallery6_link.jpg">
+                                <img src="img/gallery/gallery6_link.jpg" alt="gallery6">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="five-block col-sm-4 col-xs-6">
                         <div class="gallery__item gallery__video">
                             <a rel="video_group" href="https://www.youtube.com/watch?v=niL-HNPnOHY" data-rel="media">
-                                <img src="img/gallery/gallery1.jpg" alt="gallery1">
+                                <img src="img/gallery/gallery7.jpg" alt="gallery7">
                             </a>
                         </div>
                     </div>
-                    <div class="five-block col-sm-4">
+                    <div class="five-block col-sm-4 col-xs-6 hidden-xs">
+                        <div class="gallery__item gallery__photo">
+                            <a rel="photo_group" href="img/gallery/gallery8_link.jpg">
+                                <img src="img/gallery/gallery8.jpg" alt="gallery8">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="five-block col-sm-4 col-xs-6 hidden-xs">
+                        <div class="gallery__item gallery__photo">
+                            <a rel="photo_group" href="img/gallery/gallery9_link.jpg">
+                                <img src="img/gallery/gallery9.jpg" alt="gallery9">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="five-block col-sm-4 col-xs-6 hidden-xs">
+                        <div class="gallery__item gallery__photo">
+                            <a rel="photo_group" href="img/gallery/gallery10_link.jpg">
+                                <img src="img/gallery/gallery10.jpg" alt="gallery10">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="five-block col-sm-4 col-xs-6">
+                        <div class="gallery__item gallery__photo">
+                            <a rel="photo_group" href="img/gallery/gallery11_link.jpg">
+                                <img src="img/gallery/gallery11.jpg" alt="gallery11">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="five-block col-sm-4 col-xs-6">
+                        <div class="gallery__item gallery__photo">
+                            <a rel="photo_group" href="img/gallery/gallery12_link.jpg">
+                                <img src="img/gallery/gallery12.jpg" alt="gallery12">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="five-block col-sm-4 col-xs-6">
                         <div class="gallery__item gallery__video">
-                            <a rel="video_group" href="https://www.youtube.com/watch?v=niL-HNPnOHY" data-rel="media">
-                                <img src="img/gallery/gallery1.jpg" alt="gallery1">
+                            <a rel="video_group" href="https://www.youtube.com/watch?v=IEBVOhtRLyg" data-rel="media">
+                                <img src="img/gallery/gallery16.jpg" alt="gallery13">
                             </a>
                         </div>
                     </div>
-                    <div class="five-block col-sm-4">
+                    <div class="five-block col-sm-4 col-xs-6 hidden-xs">
+                        <div class="gallery__item gallery__photo">
+                            <a rel="photo_group" href="img/gallery/gallery14_link.jpg">
+                                <img src="img/gallery/gallery14.jpg" alt="gallery14">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="five-block col-sm-4 col-xs-6">
                         <div class="gallery__item gallery__video">
-                            <a rel="video_group" href="https://www.youtube.com/watch?v=niL-HNPnOHY" data-rel="media">
-                                <img src="img/gallery/gallery1.jpg" alt="gallery1">
+                            <a rel="video_group" href="https://www.youtube.com/watch?v=QZrm-p3FBdk" data-rel="media">
+                                <img src="img/gallery/gallery17.jpg" alt="gallery17">
                             </a>
                         </div>
                     </div>
-                    <div class="five-block col-sm-4">
+                    <div class="five-block col-sm-4 col-xs-6 hidden-xs">
                         <div class="gallery__item gallery__video">
-                            <a rel="video_group" href="https://www.youtube.com/watch?v=niL-HNPnOHY" data-rel="media">
-                                <img src="img/gallery/gallery1.jpg" alt="gallery1">
+                            <a rel="video_group" href="https://www.youtube.com/watch?v=iYui8FhgwgA" data-rel="media">
+                                <img src="img/gallery/gallery18.jpg" alt="gallery18">
                             </a>
                         </div>
                     </div>
-                    <div class="five-block col-sm-4">
+                    <div class="five-block col-sm-4 col-xs-6 hidden-xs">
+                        <div class="gallery__item gallery__photo">
+                            <a rel="photo_group" href="img/gallery/gallery15_link.jpg">
+                                <img src="img/gallery/gallery15.jpg" alt="gallery15">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="five-block col-sm-4 col-xs-6 hidden-xs">
                         <div class="gallery__item gallery__video">
-                            <a rel="video_group" href="https://www.youtube.com/watch?v=niL-HNPnOHY" data-rel="media">
-                                <img src="img/gallery/gallery1.jpg" alt="gallery1">
+                            <a rel="video_group" href="https://www.youtube.com/watch?v=iw0BBWGOEbY" data-rel="media">
+                                <img src="img/gallery/gallery19.jpg" alt="gallery19">
                             </a>
                         </div>
                     </div>
-                    <div class="five-block col-sm-4">
+                    <div class="five-block col-sm-4 col-xs-6">
                         <div class="gallery__item gallery__photo">
-                            <a rel="photo_group" href="img/gallery/gallery1_link.jpg">
-                                <img src="img/gallery/gallery1.jpg" alt="gallery1">
+                            <a rel="photo_group" href="img/gallery/gallery20_link.jpg">
+                                <img src="img/gallery/gallery20.jpg" alt="gallery20">
                             </a>
                         </div>
                     </div>
-                    <div class="five-block col-sm-4">
+                    <div class="five-block col-sm-4 col-xs-6 hidden-xs">
                         <div class="gallery__item gallery__photo">
-                            <a rel="photo_group" href="img/gallery/gallery2_link.jpg">
-                                <img src="img/gallery/gallery2_link.jpg" alt="gallery1">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="five-block col-sm-4">
-                        <div class="gallery__item gallery__photo">
-                            <a rel="photo_group" href="img/gallery/gallery2_link.jpg">
-                                <img src="img/gallery/gallery1.jpg" alt="gallery1">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="five-block col-sm-4">
-                        <div class="gallery__item gallery__photo">
-                            <a rel="photo_group" href="img/gallery/gallery2_link.jpg">
-                                <img src="img/gallery/gallery1.jpg" alt="gallery1">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="five-block col-sm-4">
-                        <div class="gallery__item gallery__photo">
-                            <a rel="photo_group" href="img/gallery/gallery2_link.jpg">
-                                <img src="img/gallery/gallery1.jpg" alt="gallery1">
+                            <a rel="photo_group" href="img/gallery/gallery21_link.jpg">
+                                <img src="img/gallery/gallery21.jpg" alt="gallery21">
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="block6">
+        <section class="block6" id="faq">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
@@ -1012,12 +1613,11 @@
                                     <div class="question">
                                         <img src="img/question-icon.png" alt="question-icon">
                                         <span>
-                                        Как быстро окупаются затраты на приобретение оборудования?
-                                    </span>
+                                         Как быстро окупаются затраты на приобретение оборудования?
+                                        </span>
                                     </div>
                                     <div class="hides-answer ">
-                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список
-                                        секретных мест с хорошим трафиком, протестированных нами лично!
+                                        Ёмкость одного рюкзака — 12 литров — 60 стаканчиков напитка. Продавая каждый стаканчик за 100 рублей, вы сможете заработать в день около 3 500 рублей, а в месяц свыше 80 000 рублей, и это не предел, т.к. расчет приведен на одного человека с одним рюкзаком. Несложные подсчеты позволяют понять, что один рюкзак окупается за 1-2 недели.
                                     </div>
                                 </div>
                             </div>
@@ -1030,8 +1630,7 @@
                                         </span>
                                     </div>
                                     <div class="hides-answer ">
-                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список
-                                        секретных мест с хорошим трафиком, протестированных нами лично!
+                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список секретных мест с хорошим трафиком, протестированных нами лично!
                                     </div>
                                 </div>
                             </div>
@@ -1044,8 +1643,7 @@
                                         </span>
                                     </div>
                                     <div class="hides-answer ">
-                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список
-                                        секретных мест с хорошим трафиком, протестированных нами лично!
+                                        Зимой и летом температура напитка в рюкзаке сохраняется в течение 6 часов.
                                     </div>
                                 </div>
                             </div>
@@ -1058,8 +1656,7 @@
                                         </span>
                                     </div>
                                     <div class="hides-answer ">
-                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список
-                                        секретных мест с хорошим трафиком, протестированных нами лично!
+                                        Торговля носит уведомительный характер, сертификация добровольная.
                                     </div>
                                 </div>
                             </div>
@@ -1072,8 +1669,7 @@
                                         </span>
                                     </div>
                                     <div class="hides-answer ">
-                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список
-                                        секретных мест с хорошим трафиком, протестированных нами лично!
+                                        1 человек из нашей команды продаёт 12 литров в день.
                                     </div>
                                 </div>
                             </div>
@@ -1086,8 +1682,7 @@
                                         </span>
                                     </div>
                                     <div class="hides-answer ">
-                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список
-                                        секретных мест с хорошим трафиком, протестированных нами лично!
+                                        Да, сделаем! Размер скидки индивидуален, обращайтесь через форму для оптовиков выше!
                                     </div>
                                 </div>
                             </div>
@@ -1100,8 +1695,7 @@
                                         </span>
                                     </div>
                                     <div class="hides-answer ">
-                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список
-                                        секретных мест с хорошим трафиком, протестированных нами лично!
+                                        В любом ближайшем супермаркете, информацию и рецепты напитков мы предоставляем!
                                     </div>
                                 </div>
                             </div>
@@ -1110,26 +1704,11 @@
                                     <div class="question">
                                         <img src="img/question-icon.png" alt="question-icon">
                                         <span>
-                                        Как быстро окупаются затраты на приобретение оборудования?
-                                    </span>
-                                    </div>
-                                    <div class="hides-answer ">
-                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список
-                                        секретных мест с хорошим трафиком, протестированных нами лично!
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="question__inner">
-                                <div class="question__item">
-                                    <div class="question">
-                                        <img src="img/question-icon.png" alt="question-icon">
-                                        <span>
-                                            Где лучше торговать напитками?
+                                            Люди не станут покупать напитки на улице?
                                         </span>
                                     </div>
                                     <div class="hides-answer ">
-                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список
-                                        секретных мест с хорошим трафиком, протестированных нами лично!
+                                        Бизнес-модель опробована и работает, убедиться в этом можно, посмотрев видео выше!
                                     </div>
                                 </div>
                             </div>
@@ -1138,12 +1717,11 @@
                                     <div class="question">
                                         <img src="img/question-icon.png" alt="question-icon">
                                         <span>
-                                            Как долго держится температура напитка на морозе и в жару?
+                                           Я не наберу штат сотрудников для продажи?
                                         </span>
                                     </div>
                                     <div class="hides-answer ">
-                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список
-                                        секретных мест с хорошим трафиком, протестированных нами лично!
+                                        Вы можете работать сами либо воспользоваться нашими наработками в области найма персонала, приобретая пакет «Оптимальный», в который входит консалтинг!
                                     </div>
                                 </div>
                             </div>
@@ -1152,12 +1730,11 @@
                                     <div class="question">
                                         <img src="img/question-icon.png" alt="question-icon">
                                         <span>
-                                            Какие нужны документы для организации торговли?
+                                            У меня нет опыта предпринимательской деятельности?
                                         </span>
                                     </div>
                                     <div class="hides-answer ">
-                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список
-                                        секретных мест с хорошим трафиком, протестированных нами лично!
+                                        Это простой и понятный бизнес, не требующий специальных навыков. Технология продажи продуктов питания на улице существует издавна – вспомните бабушек с пирожками и коробейников – у них тоже нет и не было никаких предпринимательских навыков, что не мешает им зарабатывать!
                                     </div>
                                 </div>
                             </div>
@@ -1166,12 +1743,11 @@
                                     <div class="question">
                                         <img src="img/question-icon.png" alt="question-icon">
                                         <span>
-                                           Сколько вы сами продаёте напитков в день?
+                                            Я не смогу организовать процесс производства и логистики?
                                         </span>
                                     </div>
                                     <div class="hides-answer ">
-                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список
-                                        секретных мест с хорошим трафиком, протестированных нами лично!
+                                        Данный бизнес не требует особого подхода к производству и сложной логистики – готовить напитки можно дома, а добираться до места торговли на личном автомобиле или общественном транспорте!
                                     </div>
                                 </div>
                             </div>
@@ -1180,12 +1756,11 @@
                                     <div class="question">
                                         <img src="img/question-icon.png" alt="question-icon">
                                         <span>
-                                            Сделаете скидку на покупку определённого количества рюкзаков?
+                                          Это не работает
                                         </span>
                                     </div>
                                     <div class="hides-answer ">
-                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список
-                                        секретных мест с хорошим трафиком, протестированных нами лично!
+                                        Без труда ничего не работает – это факт! Однако, стоит только приготовить напиток и выйти на улицу в место скопления народа – так Вы убедитесь, что это работает! Доказательства выше – люди покупают у нас, купят и у Вас!
                                     </div>
                                 </div>
                             </div>
@@ -1194,12 +1769,24 @@
                                     <div class="question">
                                         <img src="img/question-icon.png" alt="question-icon">
                                         <span>
-                                            Где купить сырьё для напитков?
+                                           В этой услуге не нуждаются
                                         </span>
                                     </div>
                                     <div class="hides-answer ">
-                                        В любом месте большого скопления народа: пробки, пляжи, парки и т.д. Подробнее расскажем по телефону, а также предоставим список
-                                        секретных мест с хорошим трафиком, протестированных нами лично!
+                                        Вспомните себя в жаркий летний день или, наоборот, в зимнюю стужу – разве отказались бы от стакана холодной колы или чашки ароматного согревающего кофе? Ответ очевиден!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="question__inner">
+                                <div class="question__item">
+                                    <div class="question">
+                                        <img src="img/question-icon.png" alt="question-icon">
+                                        <span>
+                                            Это не серьёзно
+                                        </span>
+                                    </div>
+                                    <div class="hides-answer ">
+                                        Серьёзный бизнес – это рулить нефтяными вышками и запускать космические корабли? Да, тогда Вы правы – это несерьёзный бизнес. Но, как ни странно, он приносит деньги и для его запуска не требуется почти никаких вложений!
                                     </div>
                                 </div>
                             </div>
@@ -1259,12 +1846,12 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-1">
+                <div class="col-lg-1 col-md-1 col-sm-6">
                     <a href="/" class="footer__logo logo">
                         <img src="img/logo.png" alt="logo">
                     </a>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="row">
                         <div class="site-address">
                             <h2>
@@ -1273,17 +1860,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-lg-6 col-md-4 col-sm-6">
                     <div class="copyright">
                         <div class="copyright__company">
-                            TERMORUKZAKI.RU, 2016-2017
+                            2015 (С) Все права защищены | ИП Сафин В.Н.
                         </div>
                         <div class="copyright__right">
-                            © All Rights Reserved
+                            ОГРНИП 314631519500037
+                        </div>
+                        <div class="copyright__studio">
+                            <p>
+                                <a href="http://termorukzaki.ru//conf.pdf" target="_blank">Политика конфиденциальности</a>
+                            </p>
+                            <p class="devlogo">Разработано в студии
+                                <a href="http://readyweb.ru/" target="_blank">
+                                    <img src="img/readyweb.png" height="24" width="116" alt="">
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-sm-offset-1 col-md-offset-0 col-lg-offset-0">
                     <div class="row">
                         <div class="phone-block">
                             <div class="phone-icon">
@@ -1291,10 +1888,10 @@
                             </div>
                             <div class="tel">
                                 <div class="tel-number">
-                                    +7 (4722) 41-10-31
+                                    +7 (846) 990-19-22
                                 </div>
                             </div>
-                            <a href="#" class="phone-order">
+                            <a href="#" data-toggle="modal" data-target="#getCall" class="phone-order">
                                 Заказать звонок
                             </a>
                         </div>
