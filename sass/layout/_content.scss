@@ -122,8 +122,8 @@
         border-radius: 10px;
         text-align: center;
         img {
-          max-width: 350px;
-          max-height: 300px;
+          max-width: 300px;
+          //max-height: 300px;
           border-radius: 10px;
           width: 100%;
         }
@@ -323,12 +323,12 @@
 
       .difference4:after {
         top: 81px;
-        left: -286px;
+        left: -417px;
       }
       .difference4:before {
-        width: 273px;
-        transform: rotate(173deg);
-        left: -272px;
+        width: 399px;
+        transform: rotate(175deg);
+        left: -398px;
         top: 70px;
       }
 
@@ -366,14 +366,14 @@
       }
 
       .difference8:after {
-        top: -108px;
-        left: -189px;
+        top: -192px;
+        left: -236px;
       }
       .difference8:before {
-        width: 240px;
-        transform: rotate(220deg);
-        left: -212px;
-        top: -24px;
+        width: 332px;
+        transform: rotate(226deg);
+        left: -281px;
+        top: -66px;
       }
     }
 
